@@ -1,13 +1,10 @@
 'use client'
-import Image from "next/image";
-import Link from "next/link";
-import { useRouter } from "next/navigation";
 import { useState } from 'react';
-// import { useRouter } from 'next/navigation';
-// import Link from 'next/link';
+import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 import axios from 'axios';
 
-export default function Home() {
+const Login = () => {
   const router = useRouter();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -63,4 +60,6 @@ export default function Home() {
       </div>
     </div>
   );
-}
+};
+
+export default Login;
