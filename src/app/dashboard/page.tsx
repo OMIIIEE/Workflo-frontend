@@ -56,7 +56,7 @@ const Dashboard = () => {
       if (!token) throw new Error("No token found");
 
       const userRes = await axios.get(
-        `http://localhost:5000/api/auth/user`,
+        `https://workflo-backend-kf6g.onrender.com/api/auth/user`,
         {
           headers: { Authorization: `Bearer ${token}` },
         }
@@ -64,7 +64,7 @@ const Dashboard = () => {
       setUser(userRes.data.user);
 
       const tasksRes = await axios.get(
-        `http://localhost:5000/api/tasks/user`,
+        `https://workflo-backend-kf6g.onrender.com/api/tasks/user`,
         {
           headers: { Authorization: `Bearer ${token}` },
         }
@@ -91,7 +91,7 @@ const Dashboard = () => {
       if (updatedTask) {
         updatedTask.status = newStatus;
 
-        await axios.put(`http://localhost:5000/api/tasks/${updatedTask._id}`, updatedTask, {
+        await axios.put(`https://workflo-backend-kf6g.onrender.com/api/tasks/${updatedTask._id}`, updatedTask, {
           headers: { Authorization: `Bearer ${token}` },
         });
 

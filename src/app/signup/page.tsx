@@ -13,7 +13,7 @@ const Signup = () => {
   const handleSignup = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:5000/api/auth/signup", { username, email, password });
+      const res = await axios.post("https://workflo-backend-kf6g.onrender.com/api/auth/signup", { username, email, password });
       if (res.data.success) {
         alert(res.data.message);
         router.push('/login');

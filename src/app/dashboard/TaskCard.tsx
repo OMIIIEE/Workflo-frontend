@@ -51,7 +51,7 @@ const TaskCard = ({ task, onDelete, onUpdate }: { task: {
       const token = localStorage.getItem("token");
       if (!token) throw new Error("No token found");
 
-      await axios.delete(`http://localhost:5000/api/tasks/${task._id}`, {
+      await axios.delete(`https://workflo-backend-kf6g.onrender.com/api/tasks/${task._id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       alert('Task deleted Successfully');
@@ -68,7 +68,7 @@ const TaskCard = ({ task, onDelete, onUpdate }: { task: {
 
       const updatedTaskWithId = { ...updatedTask, _id: task._id };
 
-      await axios.put(`http://localhost:5000/api/tasks/${task._id}`, updatedTaskWithId, {
+      await axios.put(`https://workflo-backend-kf6g.onrender.com/api/tasks/${task._id}`, updatedTaskWithId, {
         headers: { Authorization: `Bearer ${token}` },
       });
 
