@@ -53,7 +53,7 @@ const Login = () => {
         </button>
         <div className="mt-4">
           <p className="text-gray-600 text-xl">
-            Don't have an account? Create a <Link href="/signup" legacyBehavior><a className="text-violet-600 hover:text-blue-700">new account</a></Link>
+            Do not have an account? Create a <Link href="/signup" legacyBehavior><a className="text-violet-600 hover:text-blue-700">new account</a></Link>
           </p>
         </div>
       </form>
